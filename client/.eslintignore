@@ -1,2 +1,2 @@
-./node_moules/*
-./build/*
+/node_moules/**
+/build/**
