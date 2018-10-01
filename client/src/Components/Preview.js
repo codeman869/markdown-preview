@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import marked from 'marked'
+import Parser from 'html-react-parser'
 
 class Preview extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class Preview extends Component {
   }
 
   render() {
-    return <div>{this.state.html}</div>
+    return <div id="preview">{Parser(this.state.html)}</div>
   }
 }
 
