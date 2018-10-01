@@ -18,6 +18,9 @@ class Preview extends Component {
       html: marked(text),
     })
   }
+  componentDidMount() {
+    this.newMarkup(this.props.markupText)
+  }
 
   componentDidUpdate(prevProps) {
     if (prevProps === this.props) {
