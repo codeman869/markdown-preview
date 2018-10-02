@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "description": "A Markup Previewer",
   "main": "server.js",
+  "engines": {
+    "node": "10.11.0",
+    "yarn": "1.10.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint-check": "eslint --print-config . | eslint-config-prettier-check"
+    "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
+    "postinstall": "cd client && yarn install && yarn build"
   },
   "author": "Cody Deckard <cjdeckard@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "helmet": "^3.13.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
