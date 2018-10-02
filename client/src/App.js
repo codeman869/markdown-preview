@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
-
+import MainPage from './Components/MainPage'
+import Header from './Components/Header'
 import './App.css'
-import MarkupInput from './Components/MarkupInput'
-import Preview from './Components/Preview'
 import configureStore from './store'
 
 class App extends Component {
@@ -11,8 +10,8 @@ class App extends Component {
     return (
       <Provider store={configureStore()}>
         <div>
-          <MarkupInput />
-          <Preview />
+          <Header />
+          <MainPage />
         </div>
       </Provider>
     )

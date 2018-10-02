@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { updateMarkup } from '../Actions/MarkupInputActions'
 
+import './MarkupInput.css'
+
 class MarkupInput extends Component {
   handleChange(e) {
     this.props.changeMarkup(e.target.value)
@@ -12,6 +14,7 @@ class MarkupInput extends Component {
     return (
       <textarea
         id="editor"
+        className="MarkupInput"
         value={this.props.markupText}
         onChange={this.handleChange.bind(this)}
       />
